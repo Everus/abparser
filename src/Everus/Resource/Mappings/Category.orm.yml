@@ -1,0 +1,17 @@
+Everus\Model\Category:
+  tabel: category
+  type: entity
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  oneToMany:
+    contacts:
+      targetEntity: Everus\Model\Contact
+      mappedBy: category
+  fields:
+    name:
+      type: string
+    url:
+      type: string

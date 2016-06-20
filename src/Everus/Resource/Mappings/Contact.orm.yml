@@ -1,0 +1,28 @@
+Everus\Model\Contact:
+  tabel: contact
+  type: entity
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  manyToOne:
+    category:
+      targetEntity: Everus\Model\Category
+      inversedBy: contacts
+      joinColumn:
+        name: category_id
+        referencedColumnName: id
+  fields:
+    name:
+      type: string
+    url:
+      type: string
+    email:
+      type: string
+      nullable: true
+    phone:
+      type: string
+      nullable: true
+    description:
+      type: text
